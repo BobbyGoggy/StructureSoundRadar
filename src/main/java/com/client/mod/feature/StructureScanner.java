@@ -62,7 +62,8 @@ public class StructureScanner {
 
         WorldRenderer.drawBox(matrices, buffer, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ, r, g, b, a);
 
-        BufferRenderer.drawWithShader(buffer.end());
+        BufferRenderer.drawWithGlobalProgram(buffer.end());
+        
         RenderSystem.enableDepthTest();
         RenderSystem.disableBlend();
     }
