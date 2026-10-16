@@ -24,12 +24,12 @@ public class ModMenuScreen extends Screen {
 
         this.addDrawableChild(ButtonWidget.builder(Text.literal("Функции"), button -> {
             selectedTab = 0;
-            rebuildWidgets();
+            clearAndInit();
         }).dimensions(centerX - 110, centerY - 80, 100, 20).build());
 
         this.addDrawableChild(ButtonWidget.builder(Text.literal("Бинд клавиш"), button -> {
             selectedTab = 1;
-            rebuildWidgets();
+            clearAndInit();
         }).dimensions(centerX + 10, centerY - 80, 100, 20).build());
 
         if (selectedTab == 0) {
@@ -77,7 +77,7 @@ public class ModMenuScreen extends Screen {
             }
             waitingForKey = false;
             bindingFeature = null;
-            rebuildWidgets();
+            clearAndInit();
             return true;
         }
         return super.keyPressed(keyCode, scanCode, modifiers);
