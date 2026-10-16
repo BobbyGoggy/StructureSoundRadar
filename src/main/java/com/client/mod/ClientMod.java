@@ -15,7 +15,10 @@ public class ClientMod implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         WorldRenderEvents.LAST.register(StructureScanner::onRenderWorld);
-        HudRenderCallback.EVENT.register(SoundRadar::onRenderHud);
+        
+        HudRenderCallback.EVENT.register((drawContext, tickCounter) -> {
+            SoundRadar.onRenderHud(drawContext, tickCounter.getTickDelta(true));
+        });
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.getWindow() != null) {
