@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "clientmod",
+  "version": "${version}",
+  "name": "Client Mod",
+  "description": "Клиентский мод со сканером структур, звуковым радаром и удобным меню на Правый Enter.",
+  "authors": [
+    "Developer"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.client.mod.ClientMod"
+    ]
+  },
+  "mixins": [
+    "clientmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key.clientmod.menu": "Открыть меню мода",
+  "mod.clientmod.title": "Клиентское меню",
+  "mod.clientmod.tab.features": "Функции",
+  "mod.clientmod.tab.binds": "Бинды",
+  "mod.clientmod.structure_scanner": "Сканер структур",
+  "mod.clientmod.sound_radar": "Радар звуков",
+  "mod.clientmod.close": "Закрыть"
+}
